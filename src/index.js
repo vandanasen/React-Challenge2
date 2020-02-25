@@ -19,10 +19,18 @@ function App() {
       <div className="page-deets">
         <h2>Loop Over an Array of Data</h2>
       </div>
-
       {/* Iterate over imported array in userData */}
       <div className="users">
-        display data here
+        {users.map(induser => {
+          return (
+            <div>
+              <p>{induser.name}</p>
+              <p>{induser.location}</p>
+              <p>{induser.car}</p>
+            </div>
+          );
+        })}
+
         {/* Display each data in array in a card */}
         {/* Each card must have a 'key' attribute */}
       </div>
